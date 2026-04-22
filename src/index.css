@@ -1,0 +1,59 @@
+@import './styles/base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body bg-bg text-fg leading-relaxed overflow-x-hidden;
+    transition:
+      background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply py-14 md:py-16 lg:py-24 px-4 md:px-6 lg:px-12 max-w-[1200px] mx-auto border-t border-border;
+  }
+  .section-header {
+    @apply grid grid-cols-1 gap-10 lg:gap-16 mb-12 lg:mb-14 items-end;
+  }
+
+  .text-type {
+    @apply inline-block whitespace-pre-wrap;
+  }
+  .text-type__cursor {
+    @apply ml-1 inline-block opacity-100;
+  }
+  .text-type__cursor--hidden {
+    @apply hidden;
+  }
+
+  /* Experience bullets expand/collapse */
+  .exp-bullets {
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .exp-bullets-open {
+    @apply max-h-[600px] opacity-100 mt-4 pt-4 border-t border-border;
+  }
+}

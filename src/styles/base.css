@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: oklch(11% 0.012 260);
+  --bg2: oklch(15% 0.012 260);
+  --bg3: oklch(19% 0.012 260);
+  --fg: oklch(93% 0.005 260);
+  --fg2: oklch(65% 0.008 260);
+  --fg3: oklch(42% 0.008 260);
+  --accent: oklch(63% 0.22 22);
+  --accent2: oklch(72% 0.15 75);
+  --accent-glow: oklch(63% 0.22 22 / 0.18);
+  --border: oklch(28% 0.012 260);
+  --radius: 4px;
+}
+
+[data-theme='light'] {
+  --bg: oklch(97% 0.004 260);
+  --bg2: oklch(93% 0.006 260);
+  --bg3: oklch(89% 0.007 260);
+  --fg: oklch(13% 0.012 260);
+  --fg2: oklch(38% 0.01 260);
+  --fg3: oklch(60% 0.008 260);
+  --border: oklch(82% 0.008 260);
+  --accent-glow: oklch(63% 0.22 22 / 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

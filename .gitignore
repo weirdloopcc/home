@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor — JetBrains / IntelliJ IDEA
+.idea/
+
+# Editor — VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+.vite/
+
+# Test / tooling artifacts
+coverage/
+.playwright-mcp/

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/d/geren_base/**)",
+      "Bash(npm install *)",
+      "PowerShell(Select-String -Path \"D:\\\\nvm\\\\node_cache\\\\_logs\\\\2026-04-20T05_24_11_114Z-debug-0.log\" -Pattern \"error\" | Select-Object -Last 10 | ForEach-Object { $_.Line })",
+      "PowerShell(Select-String -Path \"D:\\\\nvm\\\\node_cache\\\\_logs\\\\2026-04-20T05_23_20_708Z-debug-0.log\" -Pattern \"Cannot read\" | ForEach-Object { $_.LineNumber, $_.Line })",
+      "PowerShell(Get-ChildItem \"D:\\\\geren_base\\\\home\" -Name | Where-Object { $_ -match \"lock|pnpm|yarn\" })",
+      "Bash(python3 \"C:\\\\Users\\\\74264\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"personal portfolio developer dark minimal nav cohesion\" --design-system -p \"weirdloop.cc\")",
+      "Bash(py *)",
+      "Bash(npm ls *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e ' *)",
+      "Bash(node *)"
+    ]
+  },
+  "enabledPlugins": {}
+}
