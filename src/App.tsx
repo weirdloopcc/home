@@ -11,7 +11,8 @@ import Footer from './components/Footer'
 
 function getInitialTheme(): Theme {
   const stored = localStorage.getItem('theme')
-  return isTheme(stored) ? stored : 'dark'
+  if (isTheme(stored)) return stored
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
 }
 
 function getInitialLang(): Lang {

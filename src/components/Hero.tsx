@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen pt-20 md:pt-24 max-w-[1200px] mx-auto px-4 md:px-6 lg:px-12"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen pt-20 md:pt-24 pb-16 md:pb-20 max-w-[1200px] mx-auto px-4 md:px-6 lg:px-12"
     >
       <Reveal className="text-center lg:text-left">
         <div className="font-mono text-[12px] text-accent tracking-[0.15em] uppercase mb-5 flex items-center gap-2.5 justify-center lg:justify-start before:inline-block before:w-6 before:h-px before:bg-accent">
