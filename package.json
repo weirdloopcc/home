@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "developer-icons": "^6.0.5",
     "gsap": "^3.15.0",
     "lucide-react": "^1.8.0",
