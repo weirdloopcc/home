@@ -11,7 +11,9 @@
       "Bash(npm ls *)",
       "Bash(npx tsc *)",
       "Bash(node -e ' *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(pnpm lint *)",
+      "Bash(git *)"
     ]
   },
   "enabledPlugins": {}

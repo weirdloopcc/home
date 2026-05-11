@@ -26,9 +26,16 @@ export default function About() {
         delay={0.1}
         className="[&_p]:text-[16px] [&_p]:text-fg2 [&_p]:leading-[1.85] [&_p]:mb-5 [&_p_strong]:text-fg [&_p_strong]:font-semibold"
       >
-        <p dangerouslySetInnerHTML={{ __html: t('about.p1', { years }) }} />
-        <p dangerouslySetInnerHTML={{ __html: t('about.p2') }} />
-        <p dangerouslySetInnerHTML={{ __html: t('about.p3') }} />
+        <p>
+          {t('about.p1.pre')} <strong>{years}+</strong> {t('about.p1.post')}
+        </p>
+        <p>
+          {t('about.p2.pre')} <strong>{t('about.p2.highlight1')}</strong> {t('about.p2.mid')}{' '}
+          <strong>{t('about.p2.highlight2')}</strong> {t('about.p2.post')}
+        </p>
+        <p>
+          {t('about.p3.pre')} <strong>{t('about.p3.highlight')}</strong> {t('about.p3.post')}
+        </p>
         <div className="mt-8 p-6 border border-border border-l-[3px] border-l-accent bg-bg2 rounded">
           <p className="font-mono text-[14px] text-fg2 leading-[1.7] !mb-0">{t('about.quote')}</p>
         </div>

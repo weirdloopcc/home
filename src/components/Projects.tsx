@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useT } from '../i18n'
+import { GITHUB_URL } from '../config'
 import { PERSONAL_PROJECTS } from '../data/projects'
 import Reveal from './reactbits/Reveal'
 
@@ -68,12 +69,13 @@ export default function Projects() {
             {t('projects.moreOnGithub')}
           </div>
           <a
-            href="https://github.com/weirdloopcc"
+            href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
             className="mt-2 bg-transparent text-fg font-mono text-[11px] tracking-[0.06em] px-4 py-2 border border-border rounded cursor-pointer inline-flex items-center gap-1.5 no-underline transition-[border-color,color,transform] duration-300 ease-std hover:border-accent hover:text-accent hover:-translate-y-0.5"
+            aria-label={t('projects.viewAll')}
           >
-            {t('projects.viewAll')} <ArrowUpRight size={13} />
+            {t('projects.viewAll')} <ArrowUpRight size={13} aria-hidden="true" />
           </a>
         </Reveal>
       </div>

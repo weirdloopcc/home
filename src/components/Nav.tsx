@@ -93,11 +93,14 @@ export default function Nav({ theme, lang, onToggleTheme, onSetLang }: NavProps)
             <button
               className="bg-none border-none text-fg2 cursor-pointer px-2.5 py-1.5 font-mono text-[11px] tracking-[0.06em] transition-[color,background-color] duration-300 ease-std flex items-center gap-1.5 leading-none rounded hover:text-accent hover:bg-accent-glow"
               onClick={() => setOpen((v) => !v)}
+              aria-label="Select language"
+              aria-expanded={open}
             >
-              <Languages size={14} />
+              <Languages size={14} aria-hidden="true" />
               {LANG_LABELS[lang]}
               <ChevronDown
                 size={12}
+                aria-hidden="true"
                 style={{
                   transition: 'transform 0.2s',
                   transform: open ? 'rotate(180deg)' : 'none',
@@ -126,9 +129,13 @@ export default function Nav({ theme, lang, onToggleTheme, onSetLang }: NavProps)
           <button
             className="bg-none border-none text-fg2 cursor-pointer w-8 p-0 flex justify-center items-center py-1.5 transition-[color,background-color] duration-300 ease-std rounded hover:text-accent hover:bg-accent-glow"
             onClick={onToggleTheme}
-            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
-            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            {theme === 'dark' ? (
+              <Sun size={15} aria-hidden="true" />
+            ) : (
+              <Moon size={15} aria-hidden="true" />
+            )}
           </button>
 
           {/* 汉堡按钮 — 仅移动端 */}
