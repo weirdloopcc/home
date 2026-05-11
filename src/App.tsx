@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { LangContext, ThemeContext, isLang, isTheme, type Lang, type Theme } from './i18n'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -53,6 +54,7 @@ export default function App() {
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </LangContext.Provider>
     </ThemeContext.Provider>
   )
