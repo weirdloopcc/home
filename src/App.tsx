@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { LangContext, ThemeContext, isLang, isTheme, type Lang, type Theme } from './i18n'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -51,6 +52,7 @@ export default function App() {
           <Blog />
         </main>
         <Footer />
+        <Analytics />
       </LangContext.Provider>
     </ThemeContext.Provider>
   )
